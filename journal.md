@@ -25,3 +25,17 @@ Elle ne voit pas ce que l'autre joue au tour en cours.
 
 1ere étape: vérifier le moteur avec la diapo 67 (TFT contre ALL-D
 sur 10 tours, ça doit donner 18 contre 23) avant de lancer le vrai tournoi.
+
+
+### Le moteur: une seule partie d'abord
+
+Avant de faire le tournoi, je commence par une seule partie entre deux stratégies. 
+Une stratégie c'est juste une fonction: elle reçoit
+ses coups passés et ceux de l'adversaire, et elle renvoie "C" ou "D".
+Le moteur appelle les deux fonctions avant d'ajouter les coups aux
+historiques, comme ça aucune ne voit le coup de l'autre au tour en cours.
+
+Pour vérifier j'ai codé que ALL-D et TIT-FOR-TAT, et j'ai refait la
+diapo 67 (10 tours). J'obtiens 18 pour TFT et 23 pour ALL-D, comme le cours.
+
+![verif diapo 67](captures/verif_diapo67.png)
