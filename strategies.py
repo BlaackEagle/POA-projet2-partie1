@@ -17,7 +17,10 @@ def tester(mes_coups, ses_coups):
     tour = len(mes_coups)
     if tour == 0:
         return "D"
-    return ses_coups[-1]
+    if "D" in ses_coups:           
+        return ses_coups[-1]
+    #sinon je repete C,C,D!!
+    return "D" if tour % 3 == 0 else "C"
 
 def joss(mes_coups, ses_coups):
     coup = tit_for_tat(mes_coups, ses_coups)
