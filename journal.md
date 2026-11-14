@@ -46,9 +46,32 @@ Chaque paire de stratégies joue une fois
 (5 parties de 200 tours par défaut), jamais contre elle-même, et on
 additionne les points de chacune.
 
-Vérification avec la diapo 68 (deux TFT et un ALL-D, 10 tours): je retombe sur 48, 48 et 46 toujours comme dans le cours.
+Vérification avec la diapo 68 (deux TFT et un ALL-D, 10 tours): je retombe sur 48, 48 et 46 toujours comme dans le cours.   
 
 J'ai aussi essayé la question de la diapo 69, un seul TFT contre deux ALL-D.
 Là c'est ALL-D qui gagne (43 contre 36). Ça m'a un peu surpris au début, mais en fait c'est logique : le TFT n'a personne avec qui coopérer. Il se fait avoir au premier tour par les deux et ne rattrape jamais son retard. Donc TFT ne gagne pas tout seul, ça dépend de qui est en face. À garder en tête pour le vrai tournoi.
 
 ![verif diapo 68](captures/verif_diapo68.png)
+
+## Samedi 14/11
+
+### Les 5 stratégies du cours 
+- ALL-D : trahit toujours. Forte contre ceux qui se laissent faire, bloquée
+  à 2 points par tour contre ceux qui ripostent.
+- RANDOM : pile ou face, sert de témoin. Devrait se faire exploiter par ALL-D.
+- TIT-FOR-TAT : C puis recopie l'autre. Bien contre ceux qui coopèrent.
+- TESTER : D au début pour voir. Si l'autre riposte elle passe en TFT, sinon
+  elle répète C, C, D. Profite de ceux qui ne punissent pas.
+- JOSS : TFT qui trahit une fois sur dix. Risque de casser la coopération.
+
+### Premier lancement
+TFT ne gagne pas, c'est ALL-D.
+![premier classement](captures/etape1.png)
+
+Le classement ne montrait rien d'anormal, mais en relisant mon code avec la diapo 64
+j'ai vu que TESTER ne faisait que la moitié de la règle : D puis TFT, sans
+le « sinon répète C, C, D ». J'ai donc push la v2.
+
+Ça change presque rien: TESTER passe de 9040 à 9042. Logique en fait,
+ici tout le monde riposte tout de suite, donc TESTER n'a personne à exploiter.
+![après correction](captures/etape1v2.png)
