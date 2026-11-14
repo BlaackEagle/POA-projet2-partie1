@@ -39,3 +39,16 @@ Pour vérifier j'ai codé que ALL-D et TIT-FOR-TAT, et j'ai refait la
 diapo 67 (10 tours). J'obtiens 18 pour TFT et 23 pour ALL-D, comme le cours.
 
 ![verif diapo 67](captures/verif_diapo67.png)
+
+### Le tournoi tous contre tous
+
+Chaque paire de stratégies joue une fois
+(5 parties de 200 tours par défaut), jamais contre elle-même, et on
+additionne les points de chacune.
+
+Vérification avec la diapo 68 (deux TFT et un ALL-D, 10 tours): je retombe sur 48, 48 et 46 toujours comme dans le cours.
+
+J'ai aussi essayé la question de la diapo 69, un seul TFT contre deux ALL-D.
+Là c'est ALL-D qui gagne (43 contre 36). Ça m'a un peu surpris au début, mais en fait c'est logique : le TFT n'a personne avec qui coopérer. Il se fait avoir au premier tour par les deux et ne rattrape jamais son retard. Donc TFT ne gagne pas tout seul, ça dépend de qui est en face. À garder en tête pour le vrai tournoi.
+
+![verif diapo 68](captures/verif_diapo68.png)
