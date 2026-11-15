@@ -56,16 +56,18 @@ Là c'est ALL-D qui gagne (43 contre 36). Ça m'a un peu surpris au début, mais
 ## Samedi 14/11
 
 ### Les 5 stratégies du cours 
-- ALL-D : trahit toujours. Forte contre ceux qui se laissent faire, bloquée
-  à 2 points par tour contre ceux qui ripostent.
-- RANDOM : pile ou face, sert de témoin. Devrait se faire exploiter par ALL-D.
-- TIT-FOR-TAT : C puis recopie l'autre. Bien contre ceux qui coopèrent.
-- TESTER : D au début pour voir. Si l'autre riposte elle passe en TFT, sinon
-  elle répète C, C, D. Profite de ceux qui ne punissent pas.
-- JOSS : TFT qui trahit une fois sur dix. Risque de casser la coopération.
+*ALL-D : trahit toujours. Devrait bien marcher contre ceux qui se laissent
+  faire (RANDOM), mais bloquée à 2 points par tour contre ceux qui ripostent.
+*RANDOM : C ou D à pile ou face. Devrait se faire exploiter par ALL-D.
+*TIT-FOR-TAT : C puis recopie l'autre. Devrait bien jouer contre ceux qui coopèrent et limiter la casse contre
+  ALL-D.
+*TESTER : D au début pour voir. Si l'autre riposte elle passe en TFT, sinon
+  elle répète C, C, D. Devrait profiter de ceux qui ne punissent pas.
+*JOSS : TFT qui trahit une fois sur dix à la place d'un C. Risque de casser la coopération.
 
 ### Premier lancement
 TFT ne gagne pas, c'est ALL-D.
+
 ![premier classement](captures/etape1.png)
 
 Le classement ne montrait rien d'anormal, mais en relisant mon code avec la diapo 64
@@ -74,4 +76,21 @@ le « sinon répète C, C, D ». J'ai donc push la v2.
 
 Ça change presque rien: TESTER passe de 9040 à 9042. Logique en fait,
 ici tout le monde riposte tout de suite, donc TESTER n'a personne à exploiter.
+
 ![après correction](captures/etape1v2.png)
+
+### Pourquoi TFT ne gagne pas
+Tableau des points moyens par tour dans chaque duel :
+
+![duels étape 1](captures/etape1-details.png)
+
+TFT n'arrive à 3 points par tour avec personne. Contre TESTER (2,50) ils se
+renvoient la trahison un tour sur deux, comme l'écho de la diapo 72. Contre
+JOSS (2,08) ça finit en D/D. ALL-D fait 2 partout et 3,44 contre RANDOM,
+et ça suffit.
+
+Par rapport à 1980 :
+-TFT est la seule "gentille" ici, elle n'a personne avec qui coopérer.
+-Pas de match contre soi-même: avec, TFT prendrait 3000 points et ALL-D
+  2000, donc 12056 contre 11467, et TFT gagnerait.
+-D/D rapporte 2, presque autant que C/C. À tester à l'étape 3.
