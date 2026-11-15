@@ -145,3 +145,32 @@ que je voyais 4e, gagne. TF2T, que je voyais 2e, est 4e.
 
 Par rapport à l'étape 1: ALL-D 1er→ 6e, TFT reste 2e. Le classement
 dépend surtout de qui est dans la population.
+
+## Étape 3 : deux modifications du tournoi
+Je change une seule chose à la fois pour pouvoir comparer.
+
+### Modification 1 : autres gains (D/D passe de 2 à 1)
+Je choisis celle là car à l'étape 1 j'avais noté que D/D rapporte 2, presque autant que
+C/C, et que ça aidait ALL-D. Je passe D/D à 1, les autres gains ne bougent
+pas. Ça reste un dilemme (5 > 3 > 1 > 0), et c'est la matrice du vrai
+tournoi d'Axelrod.
+
+Ma prédiction:
+1) ALL-D reste  parmi les deux derniers: il passe presque tout son temps en D/D,
+  donc il perd un point par tour partout.
+2) VENGEUR n'est plus premier : dès qu'on le trahit une fois il trahit
+  jusqu'à la fin, donc lui aussi passe beaucoup de temps en D/D.
+3) TF2T remonte parce qu'elle trahit le moins.
+Premier: Tester ou TFT2.
+
+### Modification 2 : bruit (5 %)
+Pourquoi: Dans la diapo 72, une seule erreur suffit à lancer un écho entre deux TFT. 
+J'ai maintenant une stratégie qui ne pardonne jamais (VENGEUR) et une
+qui pardonne (TF2T), je veux voir laquelle tient. À chaque tour, le coup
+de chaque joueur est inversé avec une probabilité de 5 %. 
+
+Mes Prédictions:
+1) VENGEUR descend 6e ou 7e: avec une erreur de temps en temps, il finit en
+  guerre contre tout le monde, même contre TFT et TF2T.
+2) ALL-D finit 1er ou 2e: le bruit ne le pénalise presque pas.
+3) TF2T devrait passer devant TFT: elle pardonne une erreur, TFT part en écho directement.
