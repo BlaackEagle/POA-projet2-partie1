@@ -1,3 +1,5 @@
+import random
+
 GAINS = {
     ("C", "C"): (3, 3),
     ("C", "D"): (0, 5),
@@ -5,7 +7,10 @@ GAINS = {
     ("D", "D"): (2, 2),
 }
 
-def jouer_partie(strat_a, strat_b, tours=200, gains=GAINS):
+def inverser(coup):
+    return "D" if coup == "C" else "C"
+
+def jouer_partie(strat_a, strat_b, tours=200, gains=GAINS, bruit=0.0):
     """Fait jouer une partie entre deux strategies, renvoie leurs deux scores."""
     hist_a, hist_b = [], []
     score_a, score_b = 0, 0
@@ -13,6 +18,13 @@ def jouer_partie(strat_a, strat_b, tours=200, gains=GAINS):
         #les deux choisissent en meme temps 
         coup_a = strat_a(hist_a, hist_b)
         coup_b = strat_b(hist_b, hist_a)
+        if bruit > 0:
+            #chaque coup a une probabilite d'etre inverse
+            if random.random() < bruit:
+                coup_a = inverser(coup_a)
+            if random.random() < bruit:
+                coup_b = inverser(coup_b)
+
         gain_a, gain_b = gains[(coup_a, coup_b)]
         score_a += gain_a
         score_b += gain_b
@@ -20,7 +32,7 @@ def jouer_partie(strat_a, strat_b, tours=200, gains=GAINS):
         hist_b.append(coup_b)
     return score_a, score_b 
 
-def tournoi(joueurs, parties=5, tours=200, duels=None, gains=GAINS):
+def tournoi(joueurs, parties=5, tours=200, duels=None, gains=GAINS, bruit=0.0):
     """Tous contre tous. joueurs = liste de (nom,strategie).
     Renvoie un dictionnaire {nom: score total}.
     Si on passe un dictionnaire duels, il recoit les points de chaque duel."""
@@ -31,7 +43,7 @@ def tournoi(joueurs, parties=5, tours=200, duels=None, gains=GAINS):
             nom_b, strat_b = joueurs[j]
             total_a, total_b = 0, 0
             for _ in range(parties):
-                score_a, score_b = jouer_partie(strat_a, strat_b, tours, gains)
+                score_a, score_b = jouer_partie(strat_a, strat_b, tours, gains, bruit)
                 total_a += score_a
                 total_b += score_b
             scores[nom_a] += total_a
