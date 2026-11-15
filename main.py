@@ -1,11 +1,12 @@
 """
 python main.py etape1
+python main.py etape2
 """
 import random
 import sys
 
 from moteur import tournoi, afficher_classement, afficher_duels
-from strategies import all_d, random_cd, tit_for_tat, tester, joss
+from strategies import all_d, random_cd, tit_for_tat, tester, joss, vengeur, tit_for_two_tats
 
 GRAINE = 42
 
@@ -15,6 +16,10 @@ COURS = [
     ("TIT-FOR-TAT", tit_for_tat),
     ("TESTER", tester),
     ("JOSS", joss),
+]
+ETAPE2 = COURS + [
+    ("VENGEUR", vengeur),
+    ("TF2T", tit_for_two_tats),
 ]
 
 PARTIES = 5
@@ -30,9 +35,14 @@ def lancer(titre, joueurs):
 def etape1():
     lancer("Etape 1 : les 5 strategies du cours, 5 parties de 200 tours", COURS)
 
+def etape2():
+    lancer("Etape 2 : les 5 du cours + les 2 nouvelles", ETAPE2)
+
+COMMANDES = {"etape1": etape1, "etape2": etape2}
+
 if __name__ == "__main__":
     random.seed(GRAINE)
-    if len(sys.argv) == 2 and sys.argv[1] == "etape1":
-        etape1()
+    if len(sys.argv) == 2 and sys.argv[1] in COMMANDES:
+        COMMANDES[sys.argv[1]]()
     else:
         print(__doc__.strip())
