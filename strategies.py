@@ -27,3 +27,11 @@ def joss(mes_coups, ses_coups):
     if coup == "C" and random.random() < 0.1:   
         return "D"
     return coup
+
+def vengeur(mes_coups, ses_coups):
+    return "D" if "D" in ses_coups else "C"
+
+def tit_for_two_tats(mes_coups, ses_coups):
+    if ses_coups[-2:] == ["D", "D"]:     #deux trahisons de suite
+        return "D"
+    return "C"  
