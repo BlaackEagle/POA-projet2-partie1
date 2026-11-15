@@ -94,3 +94,30 @@ Par rapport à 1980 :
 -Pas de match contre soi-même: avec, TFT prendrait 3000 points et ALL-D
   2000, donc 12056 contre 11467, et TFT gagnerait.
 -D/D rapporte 2, presque autant que C/C. À tester à l'étape 3.
+
+## Étape 2 : deux nouvelles stratégies
+
+### VENGEUR
+Coopère toujours, mais à la première trahison de l'autre il trahit jusqu'à
+la fin. Je l'ai choisie car dans le cours (71), il dit que les
+stratégies qui classaient l'adversaire « traître pour toujours » ont perdu
+parce qu'elles ne pardonnaient pas. Je veux voir si c'est vrai chez moi.
+1) Devrait bien jouer contre TFT et TF2T : personne ne trahit en premier,
+  donc 3 points par tour. Et contre RANDOM : dès le premier D il devient
+  un ALL-D et l'exploite.
+2) Devrait mal jouer contre JOSS et TESTER : une seule trahison et c'est la
+  guerre jusqu'au bout, à 2 points par tour.
+
+### TF2T (tit-for-two-tats)
+Coopère, et ne trahit que si l'autre vient de trahir deux fois de suite.
+Axelrod a écrit qu'elle aurait gagné en 1980 si on l'avait soumise. 
+Je l'ai choisie parce qu'à l'étape 1 TFT se fait piéger
+par l'écho contre TESTER et JOSS: je veux voir si pardonner une fois
+règle le problème.
+
+1) Devrait bien jouer contre TFT et VENGEUR, et mieux que TFT contre JOSS.
+2) Devrait mal jouer contre RANDOM (il trahit une fois sur deux sans être
+  puni à chaque fois) et devrait perdre deux tours au lieu d'un contre ALL-D.
+3) TESTER ne trahit jamais deux fois de suite (D, C, C, D...), donc TF2T risque de ne jamais le punir.
+
+Mon pronostic pour le classement : ALL-D gagne encore, suivi de TF2T, TFT, VENGEUR, TESTER, JOSS, RANDOM
