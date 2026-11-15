@@ -56,6 +56,8 @@ Là c'est ALL-D qui gagne (43 contre 36). Ça m'a un peu surpris au début, mais
 ## Samedi 14/11
 
 ### Les 5 stratégies du cours 
+Elles viennent toutes du tournoi d'Axelrod de 1980 (diapo 64)
+
 *ALL-D : trahit toujours. Devrait bien marcher contre ceux qui se laissent
   faire (RANDOM), mais bloquée à 2 points par tour contre ceux qui ripostent.
 *RANDOM : C ou D à pile ou face. Devrait se faire exploiter par ALL-D.
@@ -90,6 +92,7 @@ JOSS (2,08) ça finit en D/D. ALL-D fait 2 partout et 3,44 contre RANDOM,
 et ça suffit.
 
 Par rapport à 1980 :
+
 -TFT est la seule "gentille" ici, elle n'a personne avec qui coopérer.
 -Pas de match contre soi-même: avec, TFT prendrait 3000 points et ALL-D
   2000, donc 12056 contre 11467, et TFT gagnerait.
@@ -146,6 +149,8 @@ que je voyais 4e, gagne. TF2T, que je voyais 2e, est 4e.
 Par rapport à l'étape 1: ALL-D 1er→ 6e, TFT reste 2e. Le classement
 dépend surtout de qui est dans la population.
 
+## Dimanche 15/11
+
 ## Étape 3 : deux modifications du tournoi
 Je change une seule chose à la fois pour pouvoir comparer.
 
@@ -161,6 +166,7 @@ Ma prédiction:
 2) VENGEUR n'est plus premier : dès qu'on le trahit une fois il trahit
   jusqu'à la fin, donc lui aussi passe beaucoup de temps en D/D.
 3) TF2T remonte parce qu'elle trahit le moins.
+
 Premier: Tester ou TFT2.
 
 ### Modification 2 : bruit (5 %)
@@ -190,3 +196,40 @@ RANDOM et JOSS étaient trop aléatoires pour que je prédise..
 Ça confirme ce que je pensais à l'étape 1: ALL-D gagnait parce que le D/D
 du cours vaut 2. Avec la matrice d'Axelrod, trahir tout le temps est la
 pire stratégie, et pardonner redevient payant.
+
+### Résultat : bruit (5 %)
+
+![classement bruit](captures/etape3-bruit.png)
+
+Aucune prédiction s'est produit; VENGEUR gagne alors que je le voyais
+6e ou 7e, ALL-D est 5e et pas dans les deux premiers, et TF2T finit
+derrière TFT.
+
+-VENGEUR part bien en guerre contre
+tout le monde (3,00 → 2,23 contre TFT). Mais je pensais que ça le
+coulerait. En fait, une fois fâché il devient un ALL-D, et avec D/D à 2
+ça ne coûte pas cher. Il garde en plus les points de coopération du début
+de partie et ses 3,48 contre RANDOM.
+-ALL-D n'est en effet pas pénalisé, il gagne même des points (13512 → 14229), mais tous
+les autres se sont rapprochés de lui.
+-pour TF2T je vois bien que pardonner garde mieux les points (2,75 contre TESTER, TFT
+fait 2,50), mais elle se fait exploiter par tout le monde: presque tous font
+plus de 3 points contre elle.
+
+Ce qu'on remarque c'est que tout est tassé. 500 points entre le 1er et le 6e, contre
+2000 à l'étape 2. Avec le bruit tout le monde trahit un peu, donc tous les
+duels se rapprochent de 2 points par tour.
+
+Petite Note:avec mon Bruit le coup inversé est vraiment joué (il compte pour les points
+et les deux le voient). La diapo 72 parle d'un coup mal perçu par
+l'adversaire, donc ce n'est pas exactement pareil...
+
+## Récap Impasses: Ce qui n'a pas marché
+
+1) Protocole: je voulais faire jouer chaque stratégie contre elle-même, j'ai
+  changé d'avis en voyant la diapo 68. Ce choix change le gagnant de l'étape 1.
+2) TESTER: ma première version ne faisait que la moitié de la règle. Je l'ai vu en relisant la diapo 64.
+3) Etape 2: mon pronostic était faux, j'avais raisonné comme si la
+  population n'avait pas changé.
+4) Etape 3, Bruit: mes trois prédictions étaient fausses. J'avais oublié que tant que
+  D/D vaut 2, être en guerre ne coûte pas cher.
