@@ -174,3 +174,19 @@ Mes Prédictions:
   guerre contre tout le monde, même contre TFT et TF2T.
 2) ALL-D finit 1er ou 2e: le bruit ne le pénalise presque pas.
 3) TF2T devrait passer devant TFT: elle pardonne une erreur, TFT part en écho directement.
+
+### Résultat : autres gains (D/D = 1)
+
+![classement gains](captures/etape3-gains.png)
+
+Ma prédiction était assez bonne: ALL-D finit dernier (13512 →
+8016), VENGEUR n'est plus premier (3e), et TF2T gagne.
+TF2T gagne parce que c'est elle qui perd le moins: ses duels contre TFT,
+VENGEUR et TESTER ne contiennent aucun D/D, donc ils ne bougent pas.
+Par contre j'hésitais entre TESTER et TF2T pour la première place, mais TESTER finit
+  4eme: il est en D/D contre ALL-D, VENGEUR et JOSS, à 1 point par tour.
+RANDOM et JOSS étaient trop aléatoires pour que je prédise..
+
+Ça confirme ce que je pensais à l'étape 1: ALL-D gagnait parce que le D/D
+du cours vaut 2. Avec la matrice d'Axelrod, trahir tout le temps est la
+pire stratégie, et pardonner redevient payant.
