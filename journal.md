@@ -120,4 +120,28 @@ règle le problème.
   puni à chaque fois) et devrait perdre deux tours au lieu d'un contre ALL-D.
 3) TESTER ne trahit jamais deux fois de suite (D, C, C, D...), donc TF2T risque de ne jamais le punir.
 
-Mon pronostic pour le classement : ALL-D gagne encore, suivi de TF2T, TFT, VENGEUR, TESTER, JOSS, RANDOM
+Mon pronostic pour le classement : ALL-D gagne encore, suivi de TF2T, TFT, VENGEUR, TESTER, JOSS, RANDOM.
+
+### Résultat de l'étape 2
+
+![classement étape 2](captures/etape2.png)
+
+J'avais mis ALL-D premier, il finit 6e.. VENGEUR,
+que je voyais 4e, gagne. TF2T, que je voyais 2e, est 4e.
+
+* ALL-D ne joue pas moins bien qu'à l'étape 1: toujours 2 points par tour
+  partout et 3,44 contre RANDOM. Ce sont les autres qui ont monté, parce que
+  VENGEUR, TFT et TF2T ont 3 points entre eux. C'est en plus dans la diapo 69:
+  les gentilles prospèrent quand il y en a plusieurs. J'avais pas pris en compte le changement de la population.
+* VENGEUR passe devant TFT grâce à RANDOM (3,46 contre 2,49): au premier D
+  il devient un ALL-D et l'exploite. La diapo 71 dit que ne pas pardonner
+  fait perdre, mais ici ça paye, parce que ceux à qui il ne pardonne pas
+  (JOSS, TESTER, RANDOM) ne méritaient pas vraiment d'être pardonnés.
+* TF2T pardonne trop: TESTER l'exploite (3,67 pour lui, 2,00 pour elle),
+  RANDOM aussi. Mon doute sur TESTER était bon. Elle fait quand même mieux
+  que TFT contre JOSS (2,56 contre 2,09), donc pardonner casse bien l'écho.
+* TESTER monte 3e: à l'étape 1 il n'avait personne à exploiter, maintenant
+  il a TF2T.
+
+Par rapport à l'étape 1: ALL-D 1er→ 6e, TFT reste 2e. Le classement
+dépend surtout de qui est dans la population.
